@@ -1,0 +1,222 @@
+.reviews {
+  background: $bg4;
+  background-color: rgba(0, 0, 0, 0.04);
+  background-blend-mode: color-burn;
+  mix-blend-mode: color-burn;
+  overflow: hidden;
+  &__main {
+    padding: 80px 0 120px 0;
+    @include for-tablet-landscape-up {
+      position: relative;
+    }
+    @include for-desktop-up {
+      position: static;
+    }
+  }
+  &__title {
+    &-text {
+      color: $white;
+      font-size: 3em;
+      text-align: center;
+      line-height: 1.3em;
+      @extend %nunito900;
+      @include for-tablet-portrait-up {
+        font-size: 4em;
+      }
+      @include for-tablet-landscape-up {
+        font-size: 5em;
+      }
+    }
+  }
+  &__blocks {
+    margin: 64px 0 0 0;
+    position: relative;
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include for-tablet-landscape-up {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      height: 1250px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      position: static;
+    }
+    @include for-desktop-up {
+      position: relative;
+      overflow: visible;
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      height: unset;
+    }
+    &-block {
+      position: inherit;
+      z-index: 2;
+      &:last-of-type {
+        @include for-tablet-landscape-up {
+          margin: 0 24px 0 0;
+        }
+      }
+    }
+  }
+  &__positioned {
+    position: absolute;
+    z-index: 1;
+    &_1 {
+      top: 28%;
+      left: -32%;
+      @include for-tablet-portrait-up  {
+        top: 28%;
+        left: -16%;
+      }
+      @include for-desktop-up  {
+        left: -10%;
+      }
+    }
+    &_2 {
+      top: 38%;
+      left: -32%;
+      @include for-tablet-portrait-up  {
+        top: 44%;
+        left: -19%;
+      }
+      @include for-desktop-up  {
+        top: 70%;
+        left: -9%;
+      }
+    }
+    &_3 {
+      bottom: -6%;
+      left: 0%;
+      @include for-tablet-portrait-up {
+        bottom: -8%;
+        left: -6%;
+      }
+      @include for-desktop-up  {
+        bottom: -14%;
+        left: 8%;
+      }
+    }
+    &_4 {
+      bottom: -3%;
+      right: -33%;
+      @include for-tablet-portrait-up  {
+        bottom: -5%;
+        right: -21%;
+      }
+      @include for-desktop-up  {
+        bottom: -9%;
+        left: 61%;
+      }
+    }
+    &_5 {
+      bottom: 8%;
+      right: -35%;
+      @include for-tablet-portrait-up  {
+        bottom: 8%;
+        right: -16%;
+      }
+      @include for-desktop-up  {
+        bottom: 7%;
+        right: -9%;
+      }
+    }
+    &_6 {
+      bottom: 15%;
+      right: -32%;
+      @include for-tablet-portrait-up {
+        bottom: 25%;
+        right: -14%;
+      }
+      @include for-desktop-up {
+        bottom: 39%;
+        right: -6%;
+      }
+    }
+    &_7 {
+      top: -4%;
+      right: -24%;
+      @include for-tablet-portrait-up  {
+        top: -4%;
+        right: 0%;
+      }
+      @include for-desktop-up  {
+        top: -15%;
+        right: 4%;
+      }
+    }
+    &_8 {
+      top: -6%;
+      left: -23%;
+      @include for-tablet-portrait-up  {
+        top: -6%;
+        left: -12%;
+      }
+      @include for-desktop-up {
+        top: -8%;
+        left: -8%;
+      }
+    }
+  }
+  &__item {
+    background-color: $bg5;
+    backdrop-filter: blur(6px);
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid $white-gradient;
+    padding: 20px;
+    margin: 0 0 24px 0;
+    @include for-tablet-portrait-up {
+      width: 480px;
+      margin: 0 15px 15px 0;
+    }
+    @include for-tablet-landscape-up {
+      width: 290px;
+      margin: 0 0 24px 24px;
+    }
+    @include for-desktop-up {
+      width: 304px;
+    }
+    &-path {
+      display: flex;
+    }
+  }
+  &__text {
+    color: $dark-green;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: 0 0 16px 0;
+    @extend %nunito400;
+  }
+  &__img {
+    width: 48px;
+    height: 48px;
+    margin: 0 12px 0 0;
+  }
+  &__about {
+    &-title {
+      color: $dark-green;
+      margin: 0 0 6px 0;
+      @extend %roboto700;
+    }
+    &-descr {
+      color: $dark-green;
+      line-height: 1.5em;
+      @extend %roboto400;
+    }
+  }
+}
+
+
+.reviews .container {
+  @include for-tablet-landscape-up {
+    padding: 0;
+  }
+  @include for-tablet-landscape-extra-up {
+    padding: 0 10%;
+  }
+}

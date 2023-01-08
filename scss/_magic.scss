@@ -1,0 +1,133 @@
+.magic {
+  background-color: $bg2;
+  overflow: hidden;
+  &__main {
+    margin: 80px 0 0 0;
+  }
+  &__block {
+    position: relative;
+    height: 150px;
+    @include for-tablet-portrait-up {
+      height: 230px;
+    }
+    @include for-tablet-landscape-up {
+      height: 400px;
+    }
+    &-bg{
+      position: absolute;
+      left: -13%;
+      right: -13%;
+      bottom: 0;
+      top: 0;
+      height: 150px;
+      background: $bg3;
+      mix-blend-mode: overlay;
+      filter: blur(32px);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      z-index: 2;
+      @include for-tablet-portrait-up {
+        height: 230px;
+      }
+      @include for-tablet-landscape-up {
+        height: 400px;
+      }
+    }
+    &-unicorn {
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      @include for-desktop-up {
+        width: auto!important;
+      }
+      &_one {
+        width: 15%;
+        left: -13%;
+      }
+      &_two {
+        width: 25%;
+        left: 0%;
+        @include for-desktop-up {
+          left: -2%;
+        }
+      }
+      &_three {
+        width: 27%;
+        left: 22%;
+        @include for-desktop-up {
+          left: 20%;
+        }
+      }
+      &_four {
+        width: 15%;
+        left: 45%;
+        @include for-desktop-up {
+          left: 44%;
+        }
+      }
+      &_five {
+        width: 27%;
+        left: 55%;
+        @include for-desktop-up {
+          left: 56%;
+        }
+      }
+      &_six {
+        width: 27%;
+        left: 77%;
+        @include for-desktop-up {
+          left: 78%;
+        }
+      }
+      &_seven {
+        width: 15%;
+        right: -15%;
+      }
+    }
+  }
+  &__info {
+    padding: 0 0 40px 0;
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &-title {
+      color: $light-orange; 
+      text-align: center;
+      font-size: 2.8em;
+      line-height: 1.3em;
+      margin: 0 0 24px 0;
+      @extend %motter;
+      @include for-tablet-portrait-up {
+        font-size: 3.8em;
+      }
+      @include for-desktop-up {
+        font-size: 5.3em;
+      }
+    }
+    &-text {
+      color: $dark-green;
+      font-size: 1.1em;
+      text-align: center;
+      line-height: 1.5em;
+      @extend %nunito400;
+      @include for-tablet-portrait-up {
+        font-size: 1.3em;
+      }
+      @include for-tablet-landscape-up {
+        font-size: 1.5em;
+        max-width: 68%
+      }
+      @include for-desktop-up {
+        font-size: 1.6em;
+        max-width: 68%
+      }
+    }
+    &-path {
+      color: $dark-green;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      @extend %nunito700;
+    }
+  }
+}

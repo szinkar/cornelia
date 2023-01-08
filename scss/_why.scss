@@ -1,0 +1,182 @@
+.why {
+  &__inform {
+    @include for-tablet-landscape-up {
+      max-width: 45%;
+      margin: 0 50px 0 0;
+    }
+    &-title {
+      color: $dark-green;
+      font-size: 2.8em;
+      line-height: 1.2em;
+      margin: 0 0 32px 0;
+      @extend %nunito900;
+      @include for-tablet-portrait-up {
+        font-size: 3.8em;
+        max-width: 420px;
+      }
+    }
+    &-description {
+      font-size: 1em;
+      line-height: 1.4em;
+      color: $dark-green;
+      margin: 0 0 49px 0;
+      @extend %nunito400;
+      @include for-tablet-portrait-up {
+        font-size: 1.2em;
+      }
+      @include for-desktop-up {
+        font-size: 1.7em;
+        max-width: 90%;
+      } 
+    }
+  }
+  &__icon {
+    width: 16px;
+    height: 24px;
+    margin: 0 16px 0 0;
+  }
+  &__block {
+    margin: 60px 0 0 0;
+    &:last-child {
+      padding: 100px 0 100px 0;
+      @include for-tablet-landscape-up {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0 100px 0;
+      }
+      & .why__unicorn {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 120px 0 120px 0;
+    }
+  }
+  &__info {
+    @include for-tablet-landscape-up {
+      max-width: 50%;
+      margin: 0 0 0 30px;
+    }
+    &-text {
+      align-items: center;
+      color: $dark-green;
+      font-size: 1em;
+      @extend %nunito600;
+    }
+    &-title {
+      color: $light-orange;
+      font-size: 2.8em;
+      line-height: 1.2em;
+      margin: 0 0 32px 0;
+      @extend %nunito900;
+      @include for-tablet-portrait-up {
+        font-size: 3.8em;
+        max-width: 420px;
+      }
+      @include for-desktop-up {
+        font-size: 5em;
+      }
+    }
+    &-description {
+      font-size: 1em;
+      line-height: 1.4em;
+      color: $dark-green;
+      margin: 0 0 49px 0;
+      @extend %nunito400;
+      @include for-tablet-portrait-up {
+        font-size: 1.2em;
+      }
+      @include for-desktop-up {
+        font-size: 1.7em;
+        max-width: 90%;
+      } 
+    }
+    &-prompt {
+      display: flex;
+      width: 88%;
+      margin: 0 0 32px 0;
+    }
+  }
+  &__unicorn {
+    display: flex;
+    justify-content: start;
+    opacity: 0;
+    transform: scale(0);
+    @include for-tablet-landscape-up {
+      width: 100%;
+    }
+    &-circle {
+      height: 0;
+      margin: 0;
+      padding: 50% 20%;
+    }
+    &-wrapper {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      border-radius: 100%;
+      max-width: 550px;
+      margin: auto;
+      background: url('../images/unicorn-why.png') bottom -1.5em right -2.19em/cover no-repeat, $light-orange;
+      @include for-tablet-landscape-up {
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        margin: 0 auto auto auto;
+      }
+      @include for-desktop-up {
+        display: none;
+      }
+      &:last-child {
+        position: relative;
+        background-image: none;
+        background-color: $dark-green;
+        @include for-desktop-up {
+          display: block;
+          max-width: 500px;
+          max-height: 500px;
+        }
+      }
+    }
+    &-block {
+      display: none;
+      @include for-desktop-up {
+        display: flex;
+        position: relative;
+        max-width: 100%;
+        max-height: 100%;
+        height: 495px;
+        width: 495px;
+        background-color: $light-orange;
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+    &-img {
+      @include for-desktop-up {
+        position: absolute;
+        top: -152px;
+        left: -23px;
+      }
+    }
+    &-image {
+      position: absolute;
+      top: -4px;
+      left: 3px;
+      width: 100%;
+      @include for-tablet-portrait-up {
+        top: -5px;
+      }
+      @include for-tablet-landscape-up {
+        top: -4px;
+        left: 2px;
+      }
+      @include for-desktop-up {
+        left: 3.5px;
+      }
+    }
+  }
+}

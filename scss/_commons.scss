@@ -1,0 +1,15 @@
+body {
+  overflow-x: hidden;
+}
+
+
+.body {
+  &_lock {
+    overflow: hidden;
+  }
+}
+
+
+.container {
+  padding: 0 10%;
+}

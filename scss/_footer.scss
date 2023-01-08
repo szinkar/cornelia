@@ -1,0 +1,103 @@
+.footer {
+  background: $dark-green;
+  mix-blend-mode: normal;
+  &__main {
+    padding: 100px 0 0 0;
+    @include for-desktop-up  {
+      padding: 150px 0 100px 0;
+    }
+  }
+  &__info {
+    &-title {
+      font-size: 2.5em;
+      line-height: 1.3em;
+      mix-blend-mode: normal;
+      color: $light-orange;
+      text-align: center;
+      margin: 0 0 43px 0;
+      @extend %motter;
+      @include for-tablet-portrait-up {
+        font-size: 3.5em;
+      }
+      @include for-tablet-landscape-extra-up {
+        font-size: 4.5em;
+      }
+      @include for-desktop-up {
+        font-size: 5.5em;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 264px;
+    height: 82px;
+    border-radius: 300px;
+    border: 2px solid $light-orange;
+    padding: 0 40px;
+    margin: 0 0 24px 0;
+    @extend %anim; 
+    @include for-tablet-landscape-extra-up {
+      margin: 0 48px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    @include for-desktop-up {
+      &:hover {
+        background-color: $light-orange;
+      }
+      &:hover .footer__btn-part, &:hover .footer__btn-path {
+        color: $dark-green;
+      }
+    }
+    &-path {
+      display: block;
+      font-size: 1em;
+      color: $light-orange;
+      @extend %nunito700;
+      @extend %anim;
+    }
+    &-part {
+      color: $light-orange;
+      @extend %nunito600;
+      @extend %anim;
+    }
+    &-icon {
+      width: 22px;
+      height: 30px;
+      margin: 0 20px 0 0;
+      pointer-events: none;
+    }
+    &-img {
+      width: 34px;
+      height: 30px;
+      margin: 0 20px 0 0;
+      pointer-events: none;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 60px 0;
+    @include for-tablet-landscape-extra-up {
+      flex-direction: row;
+    }
+  }
+  &__logo {
+    font-size: 1.5em;
+    line-height: 1.6em;
+    padding: 0 0 30px 0;
+    @extend %motter;
+    &-name {
+      color: $light-orange;
+    }
+    &-info {
+      color: $light-orange;
+      @extend %nunito600;
+    }
+  }
+}

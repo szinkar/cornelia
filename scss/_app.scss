@@ -1,0 +1,158 @@
+.app {
+  position: relative;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    bottom: -12%;
+    right: 0;
+    z-index: 1;
+    @include for-tablet-portrait-up {
+      bottom: -14%;
+    }
+    @include for-tablet-landscape-up {
+      bottom: -18%;
+    }
+    @include for-tablet-landscape-extra-up  {
+      bottom: -35%;
+    }
+    &-image {
+      width: 450px;
+      height: 450px;
+      @include for-tablet-portrait-up {
+        width: 650px;
+        height: 650px;
+      }
+      @include for-tablet-landscape-up {
+        width: 950px;
+        height: 950px;
+      }
+      @include for-desktop-up {
+        width: 1250px;
+        height: 1250px;
+      }
+    }
+  }
+  &__main {
+    margin: 80px 0 0 0;
+    @include for-tablet-landscape-up {
+      margin: 120px 0 0 0;
+    }
+    @include for-tablet-landscape-extra-up {
+      display: flex;
+    }
+    @include for-desktop-up {
+      margin: 100px 0 0 0;
+    }
+  }
+  &__unicorn {
+    position: relative;
+    width: 100%;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    @include for-tablet-portrait-up {
+      height: 400px;
+    }
+    @include for-tablet-landscape-up {
+      height: 500px;
+    }
+    @include for-tablet-landscape-extra-up {
+      height: unset;
+    }
+    &-img {
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      pointer-events: none;
+      z-index: 2;
+      @include for-tablet-landscape-extra-up {
+        width: 100%;
+        margin: 0 0 0 10%;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 0 60px 0;
+    z-index: 2;
+    position: relative;
+    @include for-tablet-portrait-up {
+      margin: 0 0 100px 0;
+    }
+    @include for-tablet-landscape-extra-up {
+      z-index: 2;
+      width: 100%;
+    }
+    @include for-desktop-up {
+      align-items: start;
+      margin: 0 0 120px 0;
+    }
+    &-icon{
+      width: 100%;
+      margin: 0 0 32px 0;
+    }
+    &-title {
+      text-align: center;
+      color: $dark-green;
+      font-size: 3.5em;
+      line-height: 1.1em;
+      margin: 0 0 32px 0;
+      @extend %nunito900;
+      @include for-tablet-landscape-extra-up {
+        text-align: left;
+      }
+      @include for-desktop-up {
+        font-size: 4.5em;
+      }
+    }
+    &-text {
+      text-align: center;
+      color: $dark-green;
+      font-size: 1.2em;
+      line-height: 1.3em;
+      margin: 0 0 48px 0;
+      @extend %nunito400;
+      @include for-tablet-portrait-up {
+        max-width: 70%;
+      }
+      @include for-tablet-landscape-extra-up {
+        max-width: 80%;
+      }
+      @include for-desktop-up {
+        font-size: 1.5em;
+        text-align: left;
+        max-width: 68%;
+      }
+    }
+    &-path {
+      color: $dark-green;
+      font-size: 1.2em; 
+      line-height: 1.3em; 
+      @extend %nunito800;
+    }
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 255px;
+      height: 54px;
+      color: $dark-green;
+      font-size: 1em; 
+      border: 2px solid $dark-green;
+      border-radius: 100px;
+      @extend %nunito700;
+      @extend %anim;
+      @include for-desktop-up {
+        &:hover {
+          background-color: $dark-green;
+          color: $light-orange;
+        }
+      }
+    }
+  }
+}
